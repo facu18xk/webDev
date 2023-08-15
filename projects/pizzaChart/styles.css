@@ -1,0 +1,55 @@
+:root {
+  --orange: #E86A12;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+.header{
+  display:flex;
+  margin: 35px 30px;
+}
+.header--hamburger{
+  background-color: rgba(1,1,1,0);
+  border: none; 
+}
+.header--logo{
+  margin-left: 10px;
+}
+.pizzas{
+  margin: 20px;
+}
+.pizza{
+  position: relative;
+  height: 120px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 13px;
+}
+.pizzas--description{
+  margin-left: 10px;
+}
+.description--title{
+  margin: 0;
+}
+.description--text{
+  margin-top: 0;
+}
+.description--add{
+  width: 80px;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background-color:var(--orange);
+  border: none;
+  font-weight: bold;
+  border-top-left-radius: 15px
+}
+.description--add img{
+  width: 18px;
+}
