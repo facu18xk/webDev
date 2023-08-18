@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 body{
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
@@ -19,13 +22,23 @@ body{
 .header--logo{
   margin-left: 10px;
 }
+main{
+  min-height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .pizzas{
   margin: 20px;
+  margin-bottom: 0;
+ 
 }
 .pizza{
   position: relative;
   height: 120px;
   display: flex;
+  margin-bottom: 20px;
+  box-shadow:.4px .4px 6px rgba(0,0,0,0.1);
   overflow: hidden;
   border-radius: 13px;
 }
@@ -34,22 +47,57 @@ body{
 }
 .description--title{
   margin: 0;
+  margin-top: 6px;
 }
 .description--text{
-  margin-top: 0;
+  font-weight: 300;
+  margin: 0;
+}
+.description--price{
+  margin: 0;
+  margin-top: 8px;
+  font-weight: bold;
 }
 .description--add{
   width: 80px;
   height: 35px;
   position: absolute;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
   bottom: 0;
   right: 0;
   color: white;
   background-color:var(--orange);
   border: none;
-  font-weight: bold;
+  font-weight: 600;
   border-top-left-radius: 15px
 }
 .description--add img{
-  width: 18px;
+  width: 16px;
+  margin-right: 10px;
 }
+.footer{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+#takeOrder{
+  width: 243px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--orange);
+}
+.footer--price{
+  font-weight: bold;  
+  margin: 0;
+  font-size: .8rem;
+}
+.price--amount{
+  font-size: 1.2rem;
+ }
