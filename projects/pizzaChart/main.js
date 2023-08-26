@@ -1,4 +1,4 @@
-let domContainer =  document.querySelector(".pizzas"); 
+let domContainer =  document.querySelector(".pizzas"), orderPrice = 0, domPrice = document.querySelector(".price--amount"); 
 class MenuItem{
   constructor(name = "Pizza", description = "Medium | mozzarella ", price = 12, img = "assets/pizza.png"){
     this.name = name;
@@ -40,9 +40,19 @@ class MenuItem{
 const pizza1 = new MenuItem();
 const pizza2 = new MenuItem();
 const pizza3 = new MenuItem();
-
 window.addEventListener("load", ()=>{
   pizza1.create();
   pizza2.create();
   pizza3.create();
+ })
+// Add to cart 
+domContainer.addEventListener("click", (event)=>{
+  tmp = event.target.parentElement.children[2].innerText;
+  tmp = tmp.split("");
+  tmp.shift();
+  tmp = tmp.join("");
+  orderPrice += parseFloat(tmp);
+  ;
+  domPrice.innerText = ` $${orderPrice}`;
+  console.log(orderPrice);
 })
